@@ -1,0 +1,54 @@
+@use "../../foundation/variable" as *;
+
+.p-price {
+  padding-top: 4.6rem;
+
+  @include pc {
+    padding-top: 6.7rem;
+  }
+
+  &__contents {
+    margin-top: 3.9rem;
+
+    @include pc {
+      margin-top: 4rem;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    @include pc {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+
+  &__item {
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    font-weight: 700;
+    width: 21rem;
+    height: 6rem;
+    background-color: $color-main;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__textarea {
+    margin-top: 4.7rem;
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+
+    @include pc {
+      font-size: 1.8rem;
+      line-height: calc(30 / 18);
+    }
+  }
+}

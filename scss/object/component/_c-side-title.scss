@@ -1,0 +1,17 @@
+@use "../../foundation/variable" as *;
+
+.c-side-title {
+  background-color: #000;
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: calc(33 / 18);
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  height: 5rem;
+
+  @include pc {
+    
+  }
+}

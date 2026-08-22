@@ -1,0 +1,14 @@
+@use "../../foundation/variable" as *;
+
+.c-category--lg {
+  background-color: $color-main;
+  font-size: 1.5rem;
+  line-height: calc(25 / 15);
+  width: 10rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #fff;
+
+}

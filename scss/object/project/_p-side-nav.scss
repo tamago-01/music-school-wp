@@ -1,0 +1,175 @@
+@use "../../foundation/variable" as *;
+
+.p-side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+
+  @include pc {
+    gap: 3rem;
+    // margin-top: 0.5rem;
+  }
+}
+
+.p-side-nav__block--border {
+  border: 0.05rem solid #000;
+}
+
+.p-side-nav__banner-area {
+  display: block;
+  padding: 2rem;
+
+  @include pc {
+    padding: 1.5rem;
+  }
+}
+.p-side-nav__banner {
+  height: 22.8rem;
+  background-color: #e8e8e8;
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  line-height: calc(33 / 18);
+  font-weight: 700;
+  @include pc {
+    height: 17rem;
+  }
+}
+
+.p-side-nav__search {
+  display: flex;
+  // height: 9.4rem;
+  padding: 2rem;
+  background-color: #ffffff;
+
+  @include pc {
+    // height: 7rem;
+    padding: 1.5rem;
+  }
+}
+
+.p-side-nav__search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.4rem;
+  height: 5.4rem;
+  background-color: #000;
+  text-align: right;
+  cursor: pointer;
+
+  @include pc {
+    width: 4rem;
+    height: 4rem;
+    transition: opacity 0.4s;
+  }
+
+  @include pc-hover {
+    opacity: 0.7;
+  }
+}
+
+.p-side-nav__search img {
+  width: 50%;
+  height: auto;
+
+  @include pc {
+    width:55%;
+  }
+}
+.p-side-nav__search input {
+  flex: 1;
+  padding-inline: 2rem;
+  color: #858585;
+  background-color: #E8E8E8;
+  min-width: 0;
+}
+
+.p-side-nav__recommend {
+  margin-top: 2.1rem;
+  display: grid;
+  row-gap: 2.1rem;
+
+  @include pc {
+    row-gap: 1.1rem;
+    margin-top: 1.5rem;
+  }
+}
+.p-side-nav__item {
+  display: flex;
+  gap: 2rem;
+}
+.recommend-item {
+  transition: opacity 0.4s;
+
+  @include pc-hover {
+    opacity: 0.7;
+  }
+}
+
+.recommend-item__image {
+  position: relative;
+  width: 16rem;
+  flex-shrink: 0;
+
+  @include pc {
+    width: 9.5rem;
+  }
+}
+
+.recommend-item__thumb {
+  width: 100%;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 160 / 110;
+
+    @include pc {
+      aspect-ratio: 95 / 75;
+    }
+  }
+}
+
+.recommend-item__category {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.recommend-item__title {
+  margin-top: 0.84rem;
+  font-size: 1.7rem;
+  line-height: calc(28 / 17);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  @include pc {
+    margin-top: 0;
+  }
+}
+.recommend-item__date {
+  margin-top: 0.4rem;
+}
+
+.category-item__link {
+  height: 4.7rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.4s;
+
+  @include pc-hover {
+    opacity: 0.7;
+  }
+}
+
+.category-item__text {
+  font-size: 1.7rem;
+  line-height: calc(28 / 17);
+}
+.p-side-nav__category {
+  border-bottom: 0.05rem solid #000;
+}

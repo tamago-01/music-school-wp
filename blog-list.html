@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>きたむらミュージックスクールのブログ一覧</title>
+    <meta name="description" content="きたむらミュージックスクールのブログ一覧ページです。">
+    <meta name="keywords" content="ミュージックスクール, ブログ">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://code.jquery.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="icon" href="./img/common/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="container">
+         <header class="l-header p-header">
+            <div class="l-inner">
+                <div class="p-header__logo">
+                    <a href="index.html">
+                        <span class="p-header__logo-img">
+                            <img src="./img/common/header-logo_sp.svg" alt="きたむらミュージックスクールロゴ">
+                        </span>
+                        <span class="p-header__title"><span class="p-header__title-main">きたむら</span><br
+                                class="pc">ミュージックスクール</span>
+                    </a>
+                </div>
+                <nav class="p-header__nav pc js-nav">
+                    <ul class="p-header__nav-list">
+                        <li class="p-header__nav-item"><a href="plan.html">料金</a></li>
+                        <li class="p-header__nav-item"><a href="blog-list.html">ブログ</a></li>
+                        <li class="p-header__nav-item"><a href="result-list.html">卒業実績</a></li>
+                        <li class="p-header__nav-item-btn"><a href="contact_form.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="js-hamburger p-header__hamburger">
+                    <span class="p-header__drawer-icon-bar"></span>
+                    <span class="p-header__drawer-icon-bar"></span>
+                    <span class="p-header__drawer-icon-bar"></span>
+                </button>
+                <div class="p-header__nav-menu sp">
+                    <nav>
+                        <ul>
+                            <li class="p-header__nav-menu-item"><a href="plan.html">料金</a></li>
+                            <li class="p-header__nav-menu-item"><a href="blog-list.html">ブログ</a></li>
+                            <li class="p-header__nav-menu-item"><a href="result-list.html">卒業実績</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main p-page-blog-list">
+            <div class="c-kv">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/blog-list/blog-kv_sp.webp">
+                    <img src="./img/blog-list/blog-kv_pc.webp" alt="楽譜の画像">
+                </picture>
+                <div class="c-kv__overlay"></div>
+                <div class="c-kv__catch">
+                    <h1>ブログ</h1>
+                </div>
+            </div>
+            <div class="c-breadcrumbs">
+                <div class="l-inner">
+                    <nav>
+                        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a itemprop="item" href="index.html"><span itemprop="name">ホーム</span></a>
+                                <meta itemprop="position" content="1" />
+                                <span class="c-breadcrumbs__arrow">&gt;</span>
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <span class="c-breadcrumbs__current" itemprop="name">ブログ</span>
+                                <meta itemprop="position" content="2" />
+
+                            </li>
+
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <section id="blog_list" class="p-blog-list">
+                <div class="l-inner">
+                    <h2 class="c-section-title p-blog-list__section-title">ブログ一覧</h2>
+                    <div class="p-blog-list__contents">
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog01-sp.webp">
+                                        <img src="./img/common/blog01-pc.webp" alt="ギターを弾く手元">
+                                    </picture>
+                                </div>
+
+                                <span class="p-blog-list__category c-category">ギター</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">アルペジオが劇的に向上する3つの習慣</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog02-sp.webp">
+                                        <img src="./img/common/blog02-pc.webp" alt="悩んでいる男性">
+                                    </picture>
+
+                                </div>
+                                <span class="p-blog-list__category c-category">集客方法</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">集客してる間は売れないという法則</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog03-sp.webp">
+                                        <img src="./img/common/blog03-pc.webp" alt="歌っている女性">
+                                    </picture>
+                                </div>
+                                <span class="p-blog-list__category c-category">SNS</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">フォロワーではなくファンを増やせとは？</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog01-sp.webp">
+                                        <img src="./img/common/blog01-pc.webp" alt="ギターを弾く手元">
+                                    </picture>
+                                </div>
+                                <span class="p-blog-list__category c-category">ギター</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">アルペジオが劇的に向上する3つの習慣</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog02-sp.webp">
+                                        <img src="./img/common/blog02-pc.webp" alt="悩んでいる男性">
+                                    </picture>
+                                </div>
+                                <span class="p-blog-list__category c-category">集客方法</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">集客してる間は売れないという法則</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog03-sp.webp">
+                                        <img src="./img/common/blog03-pc.webp" alt="歌っている女性">
+                                    </picture>
+                                </div>
+                                <span class="p-blog-list__category c-category">SNS</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">フォロワーではなくファンを増やせとは？</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog01-sp.webp">
+                                        <img src="./img/common/blog01-pc.webp" alt="ギターを弾く手元">
+                                    </picture>
+                                </div>
+                                <span class="p-blog-list__category c-category">ギター</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">アルペジオが劇的に向上する3つの習慣</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog02-sp.webp">
+                                        <img src="./img/common/blog02-pc.webp" alt="悩んでいる男性">
+                                    </picture>
+                                </div>
+                                <span class="p-blog-list__category c-category">集客方法</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">集客してる間は売れないという法則</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog03-sp.webp">
+                                        <img src="./img/common/blog03-pc.webp" alt="歌っている女性">
+                                    </picture>
+                                </div>
+                                <span class="p-blog-list__category c-category">SNS</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">フォロワーではなくファンを増やせとは？</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+                        <a href="blog-details.html" class="p-blog-list__item blog-card">
+                            <div class="blog-card__image">
+                                <div class="blog-card__thumb">
+                                    <picture>
+                                        <source media="(max-width: 767px)" srcset="./img/common/blog01-sp.webp">
+                                        <img src="./img/common/blog01-pc.webp" alt="ギターを弾く手元">
+                                    </picture>
+                                </div>
+                                <span class="p-blog-list__category c-category">ギター</span>
+                            </div>
+                            <div class="blog-card__textarea">
+                                <h3 class="blog-card__heading c-heading c-heading--sm">アルペジオが劇的に向上する3つの習慣</h3>
+                                <p class="blog-card__date">0000.00.00</p>
+                                <p class="blog-card__text c-text">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="p-blog-list__pagination">
+                        <div class="c-pagination ">
+                            <span class="c-pagination__item current">1</span>
+                            <a href="" class="c-pagination__item">2</a>
+                            <a href="" class="c-pagination__item">3</a>
+                            <span class="c-pagination__ellipsis"><span></span><span></span><span></span></span>
+                            <a href="" class="c-pagination__item">9</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="p-fix-area">
+                <div class="p-fix-area__inner">
+                    <a href="#" class="c-back-to-top" aria-label="トップへ戻る">
+                        <img src="./img/common/arrow-top.svg" alt="トップへ戻るの矢印">
+                    </a>
+                    <a href="contact_form.html" class="c-contact-btn">お問い合わせ</a>
+                </div>
+            </div>
+        </main>
+        <footer class="p-footer section-bg">
+            <div class="l-inner">
+                <div class="p-footer__contents">
+                    <nav class="p-footer__nav">
+                        <ul class="p-footer__nav-lists">
+                            <li>
+                                <a href="index.html" class="p-footer__nav-link">ホーム</a>
+                            </li>
+                            <li>
+                                <a href="plan.html" class="p-footer__nav-link">料金</a>
+                            </li>
+                            <li>
+                                <a href="blog-list.html" class="p-footer__nav-link">ブログ</a>
+                            </li>
+                            <li>
+                                <a href="result-list.html" class="p-footer__nav-link">卒業実績</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="p-footer__logo">
+                        <a href="index.html">
+                            <img src="./img/common/logo-white.svg" alt="きたむらミュージックスクールロゴ">
+                        </a>
+                    </div>
+                    <div class="p-footer__copyright-area">
+                        <p class="p-footer__copyright">
+                            Copyright&copy;0000 KITAMURA music school Inc. <br class="sp">All Rights
+                        </p>
+                    </div>
+                    <ul class="p-footer__sns">
+                        <li>
+                            <a href="#" class="p-footer__sns-link" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/common/twitter-icon.svg" alt="x">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-footer__sns-link" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/common/fb-icon.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-footer__sns-link" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/common/youtube-icon.svg" alt="youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-footer__sns-link" target="_blank" rel="noopener noreferrer">
+                                <img src="./img/common/instagram-icon.svg" alt="instagram">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@use "../foundation/variable" as *;
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 5rem;
+  background-color: #fff;
+
+  @include pc {
+    height: 8rem;
+  }
+
+  .l-inner {
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

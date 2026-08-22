@@ -1,0 +1,11 @@
+@use "../../foundation/variable" as *;
+
+.c-text {
+     font-size: 1.6rem;
+    line-height: calc(30 / 16);
+
+    @include pc {
+      font-size: 1.8rem;
+      line-height: calc(33 / 18);
+    }
+}

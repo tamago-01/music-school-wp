@@ -1,0 +1,73 @@
+@use "../../foundation/variable" as *;
+
+.p-result-nav {
+  margin-top: 4rem;
+
+  @include pc {
+    margin-top: 5.5rem;
+  }
+}
+.p-result-nav__items {
+  display: flex;
+  gap: 2.2rem;
+  @include pc {
+    gap: 19.9rem;
+  }
+}
+
+.p-result-nav__item {
+  width: 100%;
+  transition: opacity 0.4s;
+  @include pc {
+    width: 34rem;
+  }
+  @include pc-hover {
+    opacity: 0.7;
+  }
+}
+
+.p-result-nav__label--prev {
+  background-color: $color-text;
+  display: inline-block;
+  width: 100%;
+  padding: 0.4rem 0 0.3rem 2rem;
+  color: #fff;
+}
+
+.p-result-nav__label--next {
+  background-color: $color-text;
+  display: inline-block;
+  padding: 0.4rem 2rem 0.3rem 0;
+  width: 100%;
+  color: #fff;
+  text-align: right;
+}
+
+.p-result-nav__text {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  line-height: calc(25 / 16);
+  font-weight: 700;
+}
+.p-result-nav__content {
+  @include pc {
+    display: flex;
+    gap: 1.6rem;
+
+  }
+}
+.p-result-nav__thumb {
+  display: block;
+
+  @include pc {
+    width: 9.8rem;
+    margin-top: 1.6rem;
+    flex-shrink: 0;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 98 / 68;
+    object-fit: cover;
+  }
+}

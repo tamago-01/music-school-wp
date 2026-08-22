@@ -1,0 +1,139 @@
+@use "../../foundation/variable" as *;
+
+.p-qa {
+  padding-block: 2.8rem 3rem;
+
+  @include pc {
+    padding-block: 5rem 4rem;
+  }
+
+  &__contents {
+    margin-top: 3.5rem;
+
+    @include pc {
+      margin-top: 3.6rem;
+    }
+  }
+
+  &__box {
+    border-top: #000 solid 0.5px;
+
+    &:last-child {
+      border-bottom: #000 solid 0.5px;
+    }
+    &.is-open .p-qa__item-head::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__item-head {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    padding-block: 1.3rem 1.2rem;
+    list-style: none;
+    cursor: pointer;
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    @include pc {
+      padding-left: 1.9rem;
+      padding: 1.5rem 2rem;
+      gap: 1rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s;
+      right: 1.5rem;
+      width: 1.36rem;
+      height: 0.924rem;
+      background: url(../img/top/faq-arrow.svg) no-repeat center center / contain;
+
+      @include pc {
+        right: 2.9rem;
+        height: 1.3rem;
+      }
+    }
+  }
+
+  &__item-head-icon {
+    display: grid;
+    place-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+    line-height: calc(30 / 20);
+    font-weight: 700;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    padding-bottom: 0.2rem;
+  }
+
+  &__item-head-text {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+    width: 23.3rem;
+
+    @include pc {
+      width: auto;
+      font-size: 1.7rem;
+      line-height: calc(30 / 17);
+    }
+  }
+
+  &__a-box {
+    display: none;
+    cursor: pointer;
+  
+  }
+
+  &__a-box-item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding-top: 1.3rem;
+    padding-bottom: 1.2rem;
+    background-color: rgba(203, 0, 0, 0.102);
+   
+    @include pc {
+      gap: 1rem;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  &__item-a-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+    line-height: calc(30 / 20);
+    font-weight: 700;
+    color: #fff;
+    background-color: $color-main;
+    border-radius: 50%;
+    padding-bottom: 0.1rem;
+  }
+
+  &__item-a-text {
+    font-weight: 700;
+    color: $color-main;
+    width: 23.3rem;
+
+    @include pc {
+      width: auto;
+      font-size: 1.7rem;
+      line-height: calc(30 / 17);
+    }
+  }
+}

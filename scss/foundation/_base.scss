@@ -1,0 +1,97 @@
+// その時の共通innerのmax-widthにする（基本）--------------------------
+// innerのmax-widthが880px。左右余白20px追加して920pxにしている
+
+@use "variable" as *;
+
+html {
+  font-size: 62.5%;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-all;
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+  overflow-x: hidden;
+  interpolate-size: allow-keywords;
+
+  @include pc {
+    scroll-padding-top: 80px;
+  }
+
+  //880~inner
+  @media (min-width: 768px) and (max-width: 920px) {
+    font-size: calc(10 / 920 * 100vw);
+  }
+
+  @media (max-width: 375px) {
+    font-size: calc(10 / 375 * 100vw);
+  }
+}
+
+body {
+  font-family: $font-yg;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: $color-text;
+  line-height: calc(30 / 16);
+  letter-spacing: 0;
+  margin: 0;
+  padding: 0;
+  // overflow-x: hidden;
+  overflow-x: clip;
+}
+
+/* PC,SPの非表示 */
+.pc {
+  display: none !important;
+  // spでは非表示
+
+  @include pc {
+    display: block !important;
+  }
+  // pcで表示
+}
+.sp {
+  display: block !important;
+  // spでは表示
+
+  @include pc {
+    display: none !important;
+  }
+  // pcで非表示
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+}
+
+.main {
+  margin-top: 5rem; // SP：ヘッダー高さ
+  @include pc {
+    margin-top: 8rem; // PC：ヘッダー高さ
+  }
+}
+
+.section-bg {
+  background-color: $color-main;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s;
+
+  &.is-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

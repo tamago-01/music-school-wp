@@ -1,0 +1,158 @@
+@use "../../foundation/variable" as *;
+
+// サイズ用関数
+@function vw($pixelsVw, $baseWidth) {
+  @return calc($pixelsVw / $baseWidth * 100vw);
+}
+
+$base-pc: 1080;
+$swiper-width: 880;
+$arrow-space: 45;
+$arrow-top-pixel: 146;
+$gallery-total-width: 970;
+
+.p-voice {
+  padding-block: 4.6rem 5rem;
+
+  @include pc {
+    padding-block: 4.4rem 7rem;
+  }
+
+  &__contents {
+    margin-top: 3.9rem;
+
+    @include pc {
+      display: flex;
+      justify-content: center;
+      margin-top: 3.6rem;
+    }
+  }
+
+  .gallery__slide {
+    position: relative;
+
+    @include pc {
+      width: vw($gallery-total-width, $base-pc);
+      padding-inline: vw($arrow-space, $base-pc);
+    }
+  }
+
+  &__item {
+    display: block;
+    cursor: pointer;
+
+    @include pc-hover {
+      .p-voice__item-img img {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+      .p-voice__item-textarea {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__item-img {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      aspect-ratio: 335 / 200;
+      object-fit: cover;
+      transition:
+        transform 0.4s,
+        opacity 0.4s;
+
+      @include pc {
+        aspect-ratio: 270 / 190;
+      }
+    }
+  }
+
+  &__item-textarea {
+    margin-top: 2.7rem;
+    transition: opacity 0.4s;
+
+    @include pc {
+      margin-top: 1.7rem;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+
+    @include pc {
+      font-size: vw(22, $base-pc);
+    }
+
+    @media (min-width: #{$base-pc}px) {
+      font-size: 2.2rem;
+      line-height: calc(33 / 22);
+    }
+  }
+
+  &__body-text {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    color: #fff;
+    margin-top: 1rem;
+
+    @include pc {
+      font-size: 1.8rem;
+      line-height: calc(33 / 18);
+    }
+  }
+
+  .gallery__prev,
+  .gallery__next {
+    position: absolute;
+    width: 3rem;
+    height: auto;
+    z-index: 10;
+    transition: opacity 0.4s;
+
+    @include pc {
+      top: vw($arrow-top-pixel, $base-pc);
+      transform: translateY(15%);
+    }
+
+    &::after {
+      display: none;
+    }
+
+    @include pc-hover {
+      opacity: 0.7;
+    }
+  }
+
+  .gallery__prev {
+    top: 42%;
+    @include pc {
+      left: 0;
+    }
+  }
+
+  .gallery__next {
+    top: 42%;
+    @include pc {
+      right: 0;
+    }
+  }
+
+  @media (min-width: #{$base-pc}px) {
+    .gallery__slide {
+      width: #{$gallery-total-width}px;
+      padding-inline: #{$arrow-space}px;
+    }
+    .gallery__prev,
+    .gallery__next {
+      top: #{$arrow-top-pixel}px;
+    }
+    .gallery__prev {
+      left: 0;
+    }
+    .gallery__next {
+      right: 0;
+    }
+  }
+}

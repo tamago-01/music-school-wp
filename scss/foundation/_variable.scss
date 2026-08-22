@@ -1,0 +1,27 @@
+// ブレイクポイント
+$bp_pc: 768px; //pc（768px以上）
+
+@mixin pc {
+  @media (min-width: $bp_pc) {
+    @content;
+  }
+}
+
+// PCのみホバー
+@mixin pc-hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// カラー
+$color-main: #cb0000;
+$color-text: #000000;
+$color-breadcrumbs:#E8E8E8;
+
+// フォント
+$font-yg:
+  "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック", "Noto Sans JP",
+   sans-serif;

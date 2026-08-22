@@ -1,0 +1,27 @@
+@use "../foundation/variable" as *;
+
+.l-two-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.9rem;
+
+  @include pc {
+    flex-direction: row;
+    gap: 3.1rem;
+  }
+}
+
+.l-two-column__main {
+  @include pc {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.l-two-column__side {
+  @include pc {
+    width: calc(250 / 880 * 100%);
+    flex-shrink: 0;
+    min-width: 0;
+  }
+}

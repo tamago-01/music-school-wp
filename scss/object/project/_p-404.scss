@@ -1,0 +1,32 @@
+@use "../../foundation/variable" as *;
+
+.p-notfound__text {
+  margin-top: 4.7rem;
+  margin-bottom: 0.9rem;
+
+  @include pc {
+    margin-top: 6.8rem;
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    text-align: center;
+  }
+}
+
+.p-notfound__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+
+  @include pc {
+    margin-bottom: 9rem;
+  }
+}
+.p-notfound__back-to-top {
+  display: none;
+}
+
+.p-notfound__submit-area {
+  display: none;
+}

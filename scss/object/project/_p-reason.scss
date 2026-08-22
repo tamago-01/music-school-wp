@@ -1,0 +1,81 @@
+@use "../../foundation/variable" as *;
+
+.p-reason {
+  padding-block: 4.9rem 3.7rem;
+
+  @include pc {
+    padding-block: 6.4rem 9rem;
+  }
+
+  &__contents {
+    margin-top: 3.5rem;
+    display: grid;
+    gap: 3.6rem;
+
+    @include pc {
+      margin-top: 2.8rem;
+      gap: 5rem;
+    }
+  }
+
+  &__item {
+    @include pc {
+      display: flex;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+
+    @include pc {
+      aspect-ratio: auto;
+      width: calc(350 / 880 * 100%);
+      flex-shrink: 0;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 335 / 200;
+      object-fit: cover;
+      @include pc {
+        width: 100%;
+        aspect-ratio: 350 / 247;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__item-textarea {
+    margin-top: 3rem;
+
+    @include pc {
+      margin-top: 0rem;
+    }
+
+  }
+  &__heading {
+    text-align: left;
+    border-bottom: 2px solid $color-main;
+    padding-bottom: 1rem;
+
+    @include pc {
+      font-size: 2.2rem;
+      line-height: calc(33 / 22);
+      padding-left: 5rem;
+      padding-bottom: 0.8rem;
+    }
+  }
+
+  &__body-text {
+    margin-top: 1.7rem;
+    // font-size: 1.6rem;
+    // line-height: calc(30 / 16);
+
+    @include pc {
+      // font-size: 1.8rem;
+      // line-height: calc(33 / 18);
+      padding-left: 5rem;
+      margin-top: 3.8rem;
+    }
+  }
+}

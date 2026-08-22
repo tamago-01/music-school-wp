@@ -1,0 +1,95 @@
+@use "../../foundation/variable" as *;
+
+.p-footer {
+  padding-block: 4.7rem 5.2rem;
+
+   @include pc {
+    padding-block: 4.4rem 4.2rem;
+  }
+
+    &__nav {
+    display: grid;
+    place-items: center;
+  }
+
+  &__nav-lists {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+
+    @include pc {
+      column-gap: 3.3rem;
+    }
+  }
+
+  &__nav-link {
+    color: #fff;
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    font-weight: 700;
+
+    @include pc {
+      line-height: calc(33 / 17);
+      transition: opacity 0.4s;
+    }
+    @include pc-hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__logo {
+    display: grid;
+    place-items: center;
+    margin-top: 1.8rem;
+    margin-bottom: 2.8rem;
+
+    @include pc {
+      margin-top: 2.1rem;
+      margin-bottom: 3.2rem;
+    }
+
+    a {
+      @include pc {
+        transition: opacity 0.4s;
+      }
+    }
+
+    a {
+      @include pc-hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  
+
+  &__copyright {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: calc(20 / 15);
+    color: #fff;
+  }
+
+  &__sns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.3rem;
+    margin-top: 1.7rem;
+
+    @include pc {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__sns-link {
+    display: block;
+    width: 2.2rem;
+    height: auto;
+    transition: opacity 0.4s;
+
+    @include pc-hover {
+      opacity: 0.7;
+    }
+  }
+}

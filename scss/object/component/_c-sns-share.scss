@@ -1,0 +1,72 @@
+@use "../../foundation/variable" as *;
+
+.c-sns-share {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.1rem;
+
+  @include pc {
+    display: inline-flex;
+  }
+}
+
+.c-sns-share__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.5rem;
+  height: 4rem;
+  transition: opacity 0.4s;
+
+  &--facebook {
+    background-color: #425893;
+  }
+  &--twitter {
+    background-color: #4a9feb;
+  }
+  &--hatena {
+    background-color: #4eacd5;
+  }
+  &--line {
+    background-color: #52b534;
+  }
+  &--pocket {
+    background-color: #dc4f5a;
+  }
+
+  @include pc {
+    gap: 0.8rem;
+    width: auto;
+    padding-inline: 1.5rem;
+  }
+
+  @include pc-hover {
+    opacity: 0.7;
+  }
+}
+
+
+.c-sns-share__text {
+  display: none;
+
+  @include pc {
+    display: inline;
+    font-size: 1rem;
+    line-height: calc(33 / 10);
+    font-weight: 700;
+    color: #fff;
+  }
+}
+.c-sns-share__icon {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+  }
+
+}
