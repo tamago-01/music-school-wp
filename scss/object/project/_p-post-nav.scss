@@ -9,7 +9,8 @@
 }
 
 .p-post-nav__items {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.2rem;
 
   @include pc {

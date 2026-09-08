@@ -106,121 +106,141 @@
 
 // -----------
 
-.p-blog-details__text--lg-margin {
-  margin-top: 2.5rem;
-  @include pc {
-    margin-top: 4.5rem;
-  }
-}
-
-
-.p-blog-details__textarea--sm-margin {
-  margin-top: 3.9rem;
-  @include pc {
-    margin-top: 2.9rem;
-  }
-}
-
-.p-blog-details__text--sm-margin {
-  margin-top: 1.7rem;
-}
-
-.p-blog-details__image {
-  margin-top: 6.9rem;
-  width: 100%;
-  
-
-  @include pc {
-    margin-top: 1rem;
-    width: 33.5rem;
-  }
-}
-
-.p-blog-details__thumb {
-  @include pc {
-    img {
-      width: 100%;
-      aspect-ratio: 335 / 200;
-      object-fit: cover;
+.p-blog-details__wp-editor {
+  p {
+    margin-top: 2.5rem;
+    @include pc {
+      margin-top: 4.5rem;
+      font-size: 1.8rem;
     }
   }
-}
 
-.p-blog-details__list {
-  margin-top: 2.7rem;
+  h2 {
+    margin-top: 3.9rem;
+    font-size: 2rem;
+    font-weight: bold;
+    @include pc {
+      margin-top: 2.9rem;
+    }
+  }
 
-  li {
-    font-size: 1.6rem;
-    line-height: calc(30 / 16);
+  h2 + p {
+    margin-top: 1.7rem;
+  }
+
+  figure {
+    margin-top: 6.9rem;
+    width: 100%;
+
+    @include pc {
+      margin-top: 1rem;
+      width: 33.5rem;
+      img {
+        width: 100%;
+        aspect-ratio: 335 / 200;
+        object-fit: cover;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 2.7rem;
+
+    li {
+      position: relative;
+      font-size: 1.6rem;
+      line-height: calc(30 / 16);
+      padding-left: 1.5rem;
+
+      @include pc {
+        font-size: 1.8rem;
+        line-height: calc(30 / 18);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 1.2rem;
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+  }
+
+  hr {
+    margin-top: 3.85rem;
+    border: #000 solid 0.05rem;
+    width: 100%;
+
+    @include pc {
+      margin-top: 4.05rem;
+    }
+  }
+
+  h3 {
+    margin-top: 4.5rem;
+    border-left: 0.3rem solid #000;
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  blockquote {
+    position: relative;
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 2.95rem;
+    background-color: #e8e8e8;
+    padding: 1.7rem 2rem 1.1rem 6.5rem;
 
     @include pc {
       font-size: 1.8rem;
-      line-height: calc(30 / 18);
+      margin-top: 3rem;
+      padding: 1.7rem 2rem 1.2rem 7rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 2.5rem;
+      top: 1.7rem;
+      width: 2.8rem;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      background: url(../img/blog-details/quote.svg) no-repeat center /
+        contain;
+      @include pc {
+        width: 2.8rem;
+      }
+    }
+    p {
+      margin-top: 0; 
+      line-height: calc(33 / 18);
+
+      @include pc {
+        line-height: calc(28 / 18);
+      }
     }
   }
-}
-
-.p-blog-details__border {
-  margin-top: 3.85rem;
-  border: #000 solid 0.05rem;
-  width: 100%;
-
-  @include pc {
-    margin-top: 4.05rem;
+  .p-blog-details__quote {
+    width: 16rem;
+    max-width: 100%;
   }
-}
 
-.p-blog-details__textarea--lg-margin {
-  margin-top: 4.5rem;
+  a {
+    color: $color-main;
+    font-size: 2rem;
+    line-height: calc(33 / 20);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-top: 2.7rem;
+    transition: opacity 0.4s;
 
-  @include pc {
-    margin-top: 4.5rem;
-  }
-}
-
-.p-blog-details__border-heading {
-  border-left: 0.3rem solid #000;
-  padding-left: 1rem;
-}
-
-.p-blog-details__quote-area {
-  display: flex;
-  gap: 1.4rem;
-  margin-top: 2.95rem;
-  background-color: #e8e8e8;
-  padding: 1.7rem 2rem 1.1rem 2.5rem;
-
-  @include pc {
-    margin-top: 3rem;
-    padding: 1.7rem 2rem 1.2rem 2.5rem;
-  }
-}
-.p-blog-details__quote {
-  width: 16rem;
-  max-width: 100%;
-
-  @include pc {
-    width: 8rem;
-  }
-}
-.p-blog-details__quote-text {
-  line-height: calc(33 / 18);
-
-  @include pc {
-    line-height: calc(28 / 18);
-  }
-}
-
-.p-blog-details__textlink {
-  color: $color-main;
-  font-size: 2rem;
-  line-height: calc(33 / 20);
-  font-weight: 700;
-  text-decoration: underline;
-  margin-top: 2.7rem;
-  transition: opacity 0.4s;
-
-  @include pc-hover {
-    opacity: 0.7;
+    @include pc-hover {
+      opacity: 0.7;
+    }
   }
 }

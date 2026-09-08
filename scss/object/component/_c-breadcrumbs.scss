@@ -1,10 +1,11 @@
 @use "../../foundation/variable" as *;
 
+
+
 .c-breadcrumbs {
   background-color: $color-breadcrumbs;
-  align-items: center;
 
-  ol {
+  .l-inner {
     display: flex;
     column-gap: 2rem;
     align-items: center;
@@ -15,19 +16,21 @@
       height: 5rem;
     }
   }
+
   a {
     @include pc {
       transition: opacity 0.4s;
+
       @include pc-hover {
         opacity: 0.7;
       }
     }
   }
+
   a,
-  .c-breadcrumbs__current {
+  .current-item {
     display: inline-block;
     font-size: 1.6rem;
-    // line-height: calc(33 / 16);
 
     @include pc {
       padding-block: 1rem;
