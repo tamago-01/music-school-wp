@@ -145,3 +145,14 @@ submitBtn.removeAttribute('aria-busy');
 	},
 	11
 );
+
+//管理画面「外観＞メニュー」 を表示
+function register_my_menus()
+{
+  register_nav_menus(array(
+    'primary' => 'Primary Menu',
+    'footer'  => 'Footer Menu',
+    'sp_nav'  => 'SP Navigation Menu', 
+  ));
+}
+add_action('after_setup_theme', 'register_my_menus');

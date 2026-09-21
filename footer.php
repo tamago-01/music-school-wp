@@ -2,20 +2,15 @@
     <div class="l-inner">
         <div class="p-footer__contents">
             <nav class="p-footer__nav">
-                <ul class="p-footer__nav-lists">
-                    <li>
-                        <a href="index.html" class="p-footer__nav-link">ホーム</a>
-                    </li>
-                    <li>
-                        <a href="plan.html" class="p-footer__nav-link">料金</a>
-                    </li>
-                    <li>
-                        <a href="blog-list.html" class="p-footer__nav-link">ブログ</a>
-                    </li>
-                    <li>
-                        <a href="result-list.html" class="p-footer__nav-link">卒業実績</a>
-                    </li>
-                </ul>
+                <?php
+    wp_nav_menu(
+        array(
+            'menu_class'     => 'p-footer__nav-lists',
+            'theme_location' => 'footer',
+            'container'      => false,
+        )
+    );
+    ?>
             </nav>
             <div class="p-footer__logo">
                 <a href="index.html">

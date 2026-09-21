@@ -1,7 +1,7 @@
 @use "../../foundation/variable" as *;
 
 .p-result-details__breadcrumbs {
-  height: 7.7rem;
+  // height: 7.7rem;
   // padding-top: 1rem;
 
   @include pc {
@@ -28,7 +28,7 @@
   display: inline-block;
   font-size: 1.6rem;
   line-height: calc(25 / 16);
-  // margin-top: -0.5rem;
+ 
 
   @include pc {
     margin-top: 0;

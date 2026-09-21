@@ -392,6 +392,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
   -webkit-column-gap: 2rem;
      -moz-column-gap: 2rem;
           column-gap: 2rem;
@@ -399,6 +402,10 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   height: 3.6rem;
+}
+.c-breadcrumbs .l-inner > span {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (min-width: 768px) {
   .c-breadcrumbs .l-inner {
@@ -423,6 +430,7 @@ ul {
 .c-breadcrumbs .current-item {
   display: inline-block;
   font-size: 1.6rem;
+  white-space: nowrap;
 }
 @media (min-width: 768px) {
   .c-breadcrumbs a,
@@ -3092,6 +3100,7 @@ ul {
           justify-content: space-between;
   font-size: 1.8rem;
   line-height: 1.6666666667;
+  text-align: center;
 }
 
 .text-bold {
@@ -3213,6 +3222,11 @@ ul {
   }
 }
 
+.p-search-back {
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+
 .p-result-list {
   padding-top: 4.6rem;
   padding-bottom: 11.5rem;
@@ -3323,9 +3337,6 @@ ul {
   }
 }
 
-.p-result-details__breadcrumbs {
-  height: 7.7rem;
-}
 @media (min-width: 768px) {
   .p-result-details__breadcrumbs {
     height: 5rem;
@@ -3877,8 +3888,6 @@ ul {
   line-height: 1.9411764706;
   font-weight: bold;
   height: 8rem;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
 }
 .p-header__nav-item a {
   display: -webkit-box;
@@ -3889,6 +3898,8 @@ ul {
           align-items: center;
   height: 8rem;
   position: relative;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 .p-header__nav-item a::after {
   content: "";
@@ -3914,10 +3925,10 @@ ul {
   }
 }
 .p-header__nav-item-btn {
+  height: 4.5rem;
   font-size: 1.5rem;
   line-height: 2.2;
   width: 15rem;
-  height: 4.5rem;
   font-weight: 700;
   text-align: center;
   color: #fff;
@@ -3949,6 +3960,34 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   height: 4.5rem;
+}
+.p-header__nav-item-btn a::after {
+  display: none;
+}
+.p-header__nav-item-btn {
+  font-size: 1.5rem;
+  line-height: 2.2;
+  width: 15rem;
+  height: 4.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #cb0000;
+  background-color: #cb0000;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+@media (min-width: 768px) {
+  .p-header__nav-item-btn {
+    -webkit-transition: background-color 0.4s, color 0.4s, opacity 0.4s;
+    transition: background-color 0.4s, color 0.4s, opacity 0.4s;
+  }
+}
+@media (any-hover: hover) {
+  .p-header__nav-item-btn:hover {
+    background-color: #fff;
+    color: #cb0000;
+  }
 }
 .p-header__hamburger {
   position: absolute;
@@ -3994,7 +4033,7 @@ ul {
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
-.p-header__nav-menu-item a {
+.p-header__nav-menu-list li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -18,7 +18,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body style="display: none;">
     <div id="container">
         <header class="l-header p-header">
             <div class="l-inner">
@@ -44,12 +44,15 @@
 
 
             <nav class="p-header__nav pc js-nav">
-                <ul class="p-header__nav-list">
-                    <li class="p-header__nav-item"><a href="plan.html">料金</a></li>
-                    <li class="p-header__nav-item"><a href="blog-list.html">ブログ</a></li>
-                    <li class="p-header__nav-item"><a href="result-list.html">卒業実績</a></li>
-                    <li class="p-header__nav-item-btn"><a href="contact_form.html">お問い合わせ</a></li>
-                </ul>
+                <?php
+    wp_nav_menu(
+        array(
+            'menu_class'     => 'p-header__nav-list',
+            'theme_location' => 'primary',
+            'container'      => false,
+        )
+    );
+    ?>
             </nav>
             <button type="button" class="js-hamburger p-header__hamburger">
                 <span class="p-header__drawer-icon-bar"></span>
@@ -58,11 +61,15 @@
             </button>
             <div class="p-header__nav-menu sp">
                 <nav>
-                    <ul>
-                        <li class="p-header__nav-menu-item"><a href="plan.html">料金</a></li>
-                        <li class="p-header__nav-menu-item"><a href="blog-list.html">ブログ</a></li>
-                        <li class="p-header__nav-menu-item"><a href="result-list.html">卒業実績</a></li>
-                    </ul>
+                    <?php
+        wp_nav_menu(
+            array(
+                'menu_class'     => 'p-header__nav-menu-list',
+                'theme_location' => 'sp_nav',
+                'container'      => false,
+            )
+        );
+        ?>
                 </nav>
             </div>
     </div>

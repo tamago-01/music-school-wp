@@ -11,6 +11,7 @@
 .p-search__contents {
   margin-top: 3.6rem;
   margin-bottom: 5.8rem;
+  // text-align: center;
 
   @include pc {
     margin-top: 6.8rem;
@@ -23,6 +24,7 @@
   justify-content: space-between;
   font-size: 1.8rem;
   line-height: calc(30 / 18);
+  text-align: center;
 }
 
 .text-bold {
@@ -118,4 +120,9 @@
   @include pc {
     margin-top: 6.9rem;
   }
+}
+
+.p-search-back {
+  margin-inline: auto;
+  margin-top: 5rem;
 }

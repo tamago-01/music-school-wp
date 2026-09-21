@@ -13,11 +13,7 @@
             <div class="c-side-title">
                 <p>ブログ内を検索</p>
             </div>
-            <form class="p-side-nav__search" action="search.html" method="get">
-                <input type="search" placeholder="検索ワード">
-                <button type="submit"><img src="<?php echo get_template_directory_uri(); ?>/img/blog-details/search.svg"
-                        alt="虫眼鏡"></button>
-            </form>
+            <?php get_search_form(); ?>
 
         </div>
         <div class="p-side-nav__block">

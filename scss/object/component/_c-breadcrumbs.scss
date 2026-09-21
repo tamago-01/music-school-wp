@@ -7,9 +7,14 @@
 
   .l-inner {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     column-gap: 2rem;
     align-items: center;
     height: 3.6rem;
+    > span {
+      flex-shrink: 0;
+    }
 
     @include pc {
       column-gap: 1.9rem;
@@ -31,6 +36,7 @@
   .current-item {
     display: inline-block;
     font-size: 1.6rem;
+    white-space: nowrap;
 
     @include pc {
       padding-block: 1rem;

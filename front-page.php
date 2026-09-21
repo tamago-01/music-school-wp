@@ -120,118 +120,38 @@
                     <div class="swiper gallery__swiper">
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
-                            <!-- Slides -->
+                            <?php
+  $args = array(
+    'post_type' => 'result',
+    'posts_per_page' => 6,
+  );
+  $the_query = new WP_Query($args);
+  if ($the_query->have_posts()) :
+    while ($the_query->have_posts()) : $the_query->the_post();
+  ?>
                             <div class="swiper-slide">
-                                <a href="result_details.html" class="p-voice__item">
+                                <a href="<?php the_permalink(); ?>" class="p-voice__item">
                                     <div class="p-voice__item-img">
-                                        <picture>
-                                            <source media="(max-width: 767px)"
-                                                srcset="<?php echo get_template_directory_uri(); ?>/img/common/voice01-sp.webp">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/common/voice01-pc.webp"
-                                                alt="歌っている男性">
-                                        </picture>
+                                        <?php if (has_post_thumbnail()) : ?>
+                                        <?php the_post_thumbnail(); ?>
+                                        <?php else : ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/img/common/no-image.png"
+                                            alt="No image">
+                                        <?php endif; ?>
                                     </div>
                                     <div class="p-voice__item-textarea">
-                                        <h3 class="p-voice__heading c-heading c-heading--white">証券会社勤務　丸山さん</h3>
+                                        <h3 class="p-voice__heading c-heading c-heading--white">
+                                            <?php the_field('job'); ?>　<?php the_field('name'); ?>さん</h3>
                                         <p class="p-voice__body-text">
-                                            昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
-                                        </p>
+                                            <?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
                                     </div>
                                 </a>
                             </div>
-                            <div class="swiper-slide">
-                                <a href="result_details.html" class="p-voice__item">
-                                    <div class="p-voice__item-img">
-                                        <picture>
-                                            <source media="(max-width: 767px)"
-                                                srcset="<?php echo get_template_directory_uri(); ?>/img/top/voice02-sp.webp">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/top/voice02-pc.webp"
-                                                alt="犬を抱っこしてピアノの前に座っている女性">
-                                        </picture>
-                                    </div>
-                                    <div class="p-voice__item-textarea">
-                                        <h3 class="p-voice__heading c-heading c-heading--white">IT会社勤務　S.Eさん
-                                        </h3>
-                                        <p class="p-voice__body-text">
-                                            プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="result_details.html" class="p-voice__item">
-                                    <div class="p-voice__item-img">
-                                        <picture>
-                                            <source media="(max-width: 767px)"
-                                                srcset="<?php echo get_template_directory_uri(); ?>/img/top/voice03-sp.webp">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/top/voice03-pc.webp"
-                                                alt="ギターを弾く男性">
-                                        </picture>
-                                    </div>
-                                    <div class="p-voice__item-textarea">
-                                        <h3 class="p-voice__heading c-heading c-heading--white">都内大学生　田森さん</h3>
-                                        <p class="p-voice__body-text">
-                                            就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="result_details.html" class="p-voice__item">
-                                    <div class="p-voice__item-img">
-                                        <picture>
-                                            <source media="(max-width: 767px)"
-                                                srcset="<?php echo get_template_directory_uri(); ?>/img/common/voice01-sp.webp">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/common/voice01-pc.webp"
-                                                alt="歌っている男性">
-                                        </picture>
-                                    </div>
-                                    <div class="p-voice__item-textarea">
-                                        <h3 class="p-voice__heading c-heading c-heading--white">証券会社勤務　丸山さん</h3>
-                                        <p class="p-voice__body-text">
-                                            昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="result_details.html" class="p-voice__item">
-                                    <div class="p-voice__item-img">
-                                        <picture>
-                                            <source media="(max-width: 767px)"
-                                                srcset="<?php echo get_template_directory_uri(); ?>/img/top/voice02-sp.webp">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/top/voice02-pc.webp"
-                                                alt="犬を抱っこしてピアノの前に座っている女性">
-                                        </picture>
-                                    </div>
-                                    <div class="p-voice__item-textarea">
-                                        <h3 class="p-voice__heading c-heading c-heading--white">IT会社勤務　S.Eさん
-                                        </h3>
-                                        <p class="p-voice__body-text">
-                                            プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="result_details.html" class="p-voice__item">
-                                    <div class="p-voice__item-img">
-                                        <picture>
-                                            <source media="(max-width: 767px)"
-                                                srcset="<?php echo get_template_directory_uri(); ?>/img/top/voice03-sp.webp">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/top/voice03-pc.webp"
-                                                alt="ギターを弾く男性">
-                                        </picture>
-                                    </div>
-                                    <div class="p-voice__item-textarea">
-                                        <h3 class="p-voice__heading c-heading c-heading--white">都内大学生　田森さん</h3>
-                                        <p class="p-voice__body-text">
-                                            就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。
-                                        </p>
-                                    </div>
-                                </a>
-                            </div>
-
+                            <?php
+    endwhile;
+  endif;
+  wp_reset_postdata();
+  ?>
                         </div>
 
                     </div>
@@ -346,61 +266,52 @@
             <h2 class="c-section-title">ブログ</h2>
 
             <div class="p-blog__contents">
-                <a href="blog-details.html" class="p-blog__item">
+                <?php
+$args = array(
+  'posts_per_page' => 3,
+  'post_type' => 'blog',
+  'taxonomy' => 'blog_recommend',
+  'term' => 'recommend',
+  'orderby' => 'date',
+  'order' => 'DESC'
+);
+$the_query = new WP_Query($args);
+if ($the_query->have_posts()) :
+  while ($the_query->have_posts()) : $the_query->the_post();
+?>
+                <a href="<?php the_permalink(); ?>" class="p-blog__item">
                     <div class="p-blog__item-img">
                         <div class="p-blog__thumb">
-                            <picture>
-                                <source media="(max-width: 767px)"
-                                    srcset="<?php echo get_template_directory_uri(); ?>/img/common/blog03-sp.webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/common/blog03-pc.webp"
-                                    alt="歌っている女性">
-                            </picture>
+                            <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail(); ?>
+                            <?php else : ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/common/no-image.png"
+                                alt="No image">
+                            <?php endif; ?>
                         </div>
-                        <span class="p-blog__category c-category">SNS</span>
+                        <span class="p-blog__category c-category"><?php
+                    $terms = get_the_terms(get_the_ID(), 'blog_cate');
+                    if (!empty($terms) && !is_wp_error($terms)) {
+                      echo esc_html($terms[0]->name);
+                    }
+                    ?></span>
                     </div>
                     <div class="p-blog__item-textarea">
-                        <h3 class="p-blog__heading c-heading c-heading--sm">フォロワーではなくファンを増やせとは？</h3>
-                        <p class="p-blog__date">0000.00.00</p>
-                    </div>
-                </a>
-                <a href="blog-details.html" class="p-blog__item">
-                    <div class="p-blog__item-img">
-                        <div class="p-blog__thumb">
-                            <picture>
-                                <source media="(max-width: 767px)"
-                                    srcset="<?php echo get_template_directory_uri(); ?>/img/common/blog02-sp.webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/common/blog02-pc.webp"
-                                    alt="悩んでいる男性">
-                            </picture>
-                        </div>
-                        <span class="p-blog__category c-category">集客方法</span>
-                    </div>
-                    <div class="p-blog__item-textarea">
-                        <h3 class="p-blog__heading c-heading c-heading--sm">集客してる間は売れないという法則</h3>
-                        <p class="p-blog__date">0000.00.00</p>
-                    </div>
-                </a>
-                <a href="blog-details.html" class="p-blog__item">
-                    <div class="p-blog__item-img">
-                        <div class="p-blog__thumb">
-                            <picture>
-                                <source media="(max-width: 767px)"
-                                    srcset="<?php echo get_template_directory_uri(); ?>/img/common/blog01-sp.webp">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/common/blog01-pc.webp"
-                                    alt="ギターを弾く手元">
-                            </picture>
-                        </div>
-                        <span class="p-blog__category c-category">ギター</span>
-                    </div>
-                    <div class="p-blog__item-textarea">
-                        <h3 class="p-blog__heading c-heading c-heading--sm">アルペジオが劇的に向上する3つの習慣</h3>
-                        <p class="p-blog__date">0000.00.00</p>
+                        <h3 class="p-blog__heading c-heading c-heading--sm">
+                            <?php echo wp_trim_words(get_the_title(), 20, '...'); ?></h3>
+                        <p class="p-blog__date"><?php the_time('Y-m-d'); ?></p>
                     </div>
                 </a>
 
+                <?php
+          endwhile;
+        endif;
+        wp_reset_postdata();
+        ?>
+
             </div>
             <div class="p-blog__link">
-                <a href="blog-list.html">ブログ一覧へ</a>
+                <a href="<?php echo esc_url(home_url('blog')); ?>">ブログ一覧へ</a>
             </div>
 
 

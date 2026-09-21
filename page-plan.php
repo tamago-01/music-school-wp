@@ -11,24 +11,7 @@
             <h1>プラン・料金</h1>
         </div>
     </div>
-    <div class="c-breadcrumbs">
-        <div class="l-inner">
-            <nav>
-                <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                        <a itemprop="item" href="index.html"><span itemprop="name">ホーム</span></a>
-                        <meta itemprop="position" content="1" />
-                        <span class="c-breadcrumbs__arrow">&gt;</span>
-                    </li>
-                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                        <span class="c-breadcrumbs__current" itemprop="name">プラン・料金</span>
-                        <meta itemprop="position" content="2" />
-                    </li>
-
-                </ol>
-            </nav>
-        </div>
-    </div>
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
     <section id="price" class="p-price">
         <div class="l-inner">
             <h2 class="c-section-title p-plan__section-title">料金体系</h2>

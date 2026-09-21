@@ -1,3 +1,5 @@
+
+$('body').show();
 //ハンバーガー
 $(".js-hamburger").click(function () {
   $(".p-header__hamburger").toggleClass("is-active");
