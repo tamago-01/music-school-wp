@@ -7,7 +7,7 @@
 
                 <?php if (trim(get_search_query()) === '') : ?>
 
-                <div class="p-search-text">
+                <div class="p-search-message">
                     <p>検索キーワードが未入力です。</p>
                 </div>
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="p-search-back c-submit">ホームへ戻る</a>
@@ -49,7 +49,7 @@
                     <?php endwhile; ?>
                 </div>
 
-                <div class="p-search__pagination">
+                <div class="p-search__pagination c-pagination">
                     <?php if (function_exists('wp_pagenavi')) : ?>
                     <?php wp_pagenavi(); ?>
                     <?php endif; ?>
@@ -57,10 +57,11 @@
 
                 <?php else : ?>
 
-                <div class="p-search-text">
+                <div class="p-search-message">
                     <p>「 <span class="text-bold"><?php echo esc_html(get_search_query()); ?></span>」の検索結果</p>
+
+                    <p>検索されたキーワードにマッチする記事はありませんでした。</p>
                 </div>
-                <p>検索されたキーワードにマッチする記事はありませんでした。</p>
                 <a href="<?php echo esc_url(home_url('/')); ?>" class="p-search-back c-submit">ホームへ戻る</a>
 
                 <?php endif; ?>
