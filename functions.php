@@ -33,26 +33,24 @@ function add_files()
 
   // css登録
   wp_register_style('common-style', get_theme_file_uri('/css/style.css'), array(), $now);
-
-  // 共通CSS(Swiperに変更)
-  wp_enqueue_style('swiper-style', '//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css', array(), NULL);
   wp_enqueue_style('common-style');
 
   // WordPress提供のjquery.jsを読み込まない
   wp_deregister_script('jquery');
 
   // jQueryの読み込み
-  wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.7.1.min.js', "", NULL, false);
+  wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.7.1.min.js', array(), NULL, true);
 
   //JS登録
   wp_register_script('common-script', get_theme_file_uri('/js/script.js'), array('jquery'), $now, true);
-
-  // 共通のJS(Swiperに変更)
-  wp_enqueue_script('swiper-script', '//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js', array('jquery'), NULL, true);
   wp_enqueue_script('common-script');
 
   if (is_front_page()) {
-    wp_enqueue_script('top-script', get_theme_file_uri('/js/top.js'), array('jquery'), $now, true);
+    // Swiperはトップページの「生徒の声」スライダーでしか使わないので、ここに移動
+    wp_enqueue_style('swiper-style', '//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css', array(), NULL);
+    wp_enqueue_script('swiper-script', '//cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js', array('jquery'), NULL, true);
+
+    wp_enqueue_script('top-script', get_theme_file_uri('/js/top.js'), array('jquery', 'swiper-script'), $now, true);
   }
 }
 add_action('wp_enqueue_scripts', 'add_files');
