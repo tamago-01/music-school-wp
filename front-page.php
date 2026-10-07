@@ -4,7 +4,8 @@
     <div class="p-mv">
         <picture>
             <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/top/fv_sp.webp">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/fv_pc.webp" alt="女性がギターを弾いている">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/fv_pc.webp" alt="女性がギターを弾いている"
+                fetchpriority="high">
         </picture>
         <div class="p-mv__overlay"></div>
         <div class="p-mv__catch">
@@ -141,7 +142,7 @@
                                     </div>
                                     <div class="p-voice__item-textarea">
                                         <h3 class="p-voice__heading c-heading c-heading--white">
-                                            <?php the_field('job'); ?>　<?php the_field('name'); ?>さん</h3>
+                                            <?php the_field('job'); ?><?php the_field('name'); ?>さん</h3>
                                         <p class="p-voice__body-text">
                                             <?php echo wp_trim_words(get_the_content(), 42, '...'); ?></p>
                                     </div>
