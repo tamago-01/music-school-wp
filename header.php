@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>きたむらミュージックスクール</title>
-    <meta name="description" content="きたむらミュージックスクールのホームページです。">
+
     <meta name="keywords" content="ミュージックスクール, 収益化, サポート">
     <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
